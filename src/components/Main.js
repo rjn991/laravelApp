@@ -5,15 +5,15 @@ export default function Main() {
     <form>
     <div className='container' style={{marginTop:'50px',maxWidth:'700px'}} >
     <div className='my-4'>
-        <input type="text" class="form-control" id="name" placeholder="Student Name"/>
+        <input type="text" className="form-control" id="name" placeholder="Student Name"/>
     </div>
     <div className='my-4'>
-        <input type="text" class="form-control" id="usn" placeholder="Student USN"/>
+        <input type="text" className="form-control" id="usn" placeholder="Student USN"/>
     </div>
     <div className='my-4'>
-        <input type="text" class="form-control" id="phone" placeholder="Phone Number"/>
+        <input type="text" className="form-control" id="phone" placeholder="Phone Number"/>
     </div>
-    <div className='my-4'>   <select class="form-select" aria-label="year">
+    <div className='my-4'>   <select className="form-select" aria-label="year">
         <option selected>Year of Study</option>
         <option value="1">First</option>
         <option value="2">Second</option>
@@ -22,7 +22,7 @@ export default function Main() {
     </select>
     </div>
     <div className="my-4 text-center">
-        <button type="submit" class="btn btn-primary">Send Data</button>
+        <button type="submit" className="btn btn-primary">Send Data</button>
     </div>
     </div>
     </form>
