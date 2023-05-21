@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Main() {
+export default function Input() {
   return (
     <form>
     <div className='container' style={{marginTop:'50px',maxWidth:'700px'}} >
@@ -17,7 +17,7 @@ export default function Main() {
         <option selected>Year of Study</option>
         <option value="1">First</option>
         <option value="2">Second</option>
-        <option value="3">Thrird</option>
+        <option value="3">Third</option>
         <option value="4">Fourth</option>
     </select>
     </div>
