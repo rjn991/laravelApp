@@ -15,4 +15,7 @@ class StudentController extends Controller
         $student->save();
         return $student;
      }
+     function view() {
+        return Student::all();
+     }
 }

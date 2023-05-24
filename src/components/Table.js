@@ -1,6 +1,17 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 
 function Table() {
+  const [data,setData]=useState([])
+  useEffect(()=> {
+    async function fetchData() {
+      let result = await fetch("http://localhost:8000/api/view");
+      result = await result.json();
+      setData(result)
+    }
+    fetchData()
+  },[])
+  console.warn(data)
+  let i = 1
   return (
     <div className="container mt-3">
       <table className="table table-striped">
@@ -12,27 +23,18 @@ function Table() {
             <th>Phone</th>
             <th>Year</th>
           </tr>
-          <tr>
-          <td>No.</td>
-          <td>Name</td>
-          <td>USN</td>
-          <td>Phone</td>
-          <td>Year</td>
-        </tr>
-        <tr>
-          <td>No.</td>
-          <td>Name</td>
-          <td>USN</td>
-          <td>Phone</td>
-          <td>Year</td>
-        </tr>
-        <tr>
-          <td>No.</td>
-          <td>Name</td>
-          <td>USN</td>
-          <td>Phone</td>
-          <td>Year</td>
-        </tr>
+          {
+            data.map((item)=> 
+            <tr>
+            <td>{i++}</td>
+            <td>{item.name}</td>
+            <td>{item.usn}</td>
+            <td>{item.phone}</td>
+            <td>{item.branch}</td>
+            </tr>
+            )
+          }
+          
         </tbody>
 
         
